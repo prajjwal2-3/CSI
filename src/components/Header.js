@@ -61,7 +61,7 @@ function ResponsiveAppBar() {
           </div>
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }} >
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -90,11 +90,13 @@ function ResponsiveAppBar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+             <div className="font-bold">
+             {pages.map((page) => (
+                <MenuItem key={page} onClick={handleCloseNavMenu} >
+                  <Typography textAlign="center" >{page}</Typography>
                 </MenuItem>
               ))}
+             </div>
             </Menu>
           </Box>
           {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
@@ -123,7 +125,8 @@ function ResponsiveAppBar() {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: 'white' , display: 'block' }}
+                // className='my-2 text-white block font-bold'
               >
                 {page}
               </Button>
@@ -159,6 +162,8 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
+
+        
         </Toolbar>
       </Container>
     </GlassAppBar>
