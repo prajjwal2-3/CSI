@@ -19,7 +19,17 @@ const Sponser = () => {
         />
       </div>
       <div className="sm:text-2xl text-sm">
-     <span className="bg-gradient-to-r from-violet-800 to-indigo-400 bg-clip-text text-transparent"> MetaSpace</span>, a leading decentralized metaverse platform, offers diverse experiences like gaming, events, and shopping, pushing the boundaries of virtual reality. As a sponsor of <span className="bg-gradient-to-r from-violet-800 to-indigo-400 bg-clip-text text-transparent">CSI-INNOWAVE</span>, they aim to collaborate and foster innovation in the metaverse.
+        <span className="bg-gradient-to-r from-violet-800 to-indigo-400 bg-clip-text text-transparent">
+          {" "}
+          MetaSpace
+        </span>
+        , a leading decentralized metaverse platform, offers diverse experiences
+        like gaming, events, and shopping, pushing the boundaries of virtual
+        reality. As a sponsor of{" "}
+        <span className="bg-gradient-to-r from-violet-800 to-indigo-400 bg-clip-text text-transparent">
+          CSI-INNOWAVE
+        </span>
+        , they aim to collaborate and foster innovation in the metaverse.
       </div>
     </div>
   );
