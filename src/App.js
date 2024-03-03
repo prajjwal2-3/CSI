@@ -1,23 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import ResponsiveAppBar from "./Header";
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App  ">
+    <ResponsiveAppBar/>
+      <img className="" src="https://image.lexica.art/full_webp/a04ef7ad-5ff5-4072-bb1d-ec640e8491f3" alt="photo" />
     </div>
   );
 }
