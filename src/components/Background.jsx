@@ -1,5 +1,5 @@
 import React from "react";
-import ImagesSliderDemo from "./ImgSlider";
+
 import Body from "./Body";
 
 export default function GridBackgroundDemo() {

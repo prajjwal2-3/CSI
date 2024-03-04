@@ -13,14 +13,17 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import GlassAppBar from './GlassAppBar';
-
+import {useNavigate} from 'react-router-dom'
 const pages = ['Our Team', 'Brochure', 'Events','Gallery','About Us'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar() {
+  const navigate = useNavigate();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
-
+const handlePageNavigate=(page)=>{
+navigate('/about')
+}
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -28,7 +31,8 @@ function ResponsiveAppBar() {
     setAnchorElUser(event.currentTarget);
   };
 
-  const handleCloseNavMenu = () => {
+  const handleCloseNavMenu = (page) => {
+    handlePageNavigate(page)
     setAnchorElNav(null);
   };
 
@@ -92,7 +96,7 @@ function ResponsiveAppBar() {
             >
              <div className="font-bold">
              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu} >
+                <MenuItem key={page} onClick={()=>handleCloseNavMenu(page)} >
                   <Typography textAlign="center" >{page}</Typography>
                 </MenuItem>
               ))}

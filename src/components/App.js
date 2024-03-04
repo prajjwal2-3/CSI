@@ -1,17 +1,16 @@
 import ResponsiveAppBar from "./Header";
 import GridBackgroundDemo from "./Background"
-import ImagesSliderDemo from "./ImgSlider";
 import Body from "./Body";
+import SparklesPreview from "./Hero";
+
+
 
 function App() {
   return (
     <div className="App   ">
     <ResponsiveAppBar/>
-    
-      
-    
-     <GridBackgroundDemo/>
-    </div>
+    <GridBackgroundDemo/>
+     </div>
   );
 }
 
