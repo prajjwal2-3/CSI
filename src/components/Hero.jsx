@@ -4,7 +4,7 @@ import { SparklesCore } from "./ui/sparkles.tsx";
 
 export default function SparklesPreview() {
   return (
-    <div className="sm:h-[30rem] h-[15rem] sm:w-full w-11/12  bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-black/90 via-black/70 to-black/20 flex flex-col items-center justify-center overflow-hidden rounded-md">
+    <div className="sm:h-[30rem] h-[15rem] sm:w-full w-11/12  bg-black flex flex-col items-center justify-center overflow-hidden rounded-md ">
       <h1 className="md:text-7xl text-3xl lg:text-9xl font-bold text-center  relative z-20 bg-gradient-to-r from-violet-800 to-red-400 bg-clip-text text-transparent">
         CSI INNOWAVE
       </h1>
