@@ -3,6 +3,7 @@ import ImagesSliderDemo from './ImgSlider'
 import  SparklesPreview  from './Hero'
 import Sponser from './Sponser'
 import HomeAbout from './HomeAbout'
+import InfiniteMovingCardsDemo from './Events'
 
 const Body = () => {
   return (
@@ -12,6 +13,7 @@ const Body = () => {
      <ImagesSliderDemo/>
      <div className="flex justify-center"><Sponser/></div>
      <div className="flex justify-center"><HomeAbout/></div>
+     <div className=""><InfiniteMovingCardsDemo/></div>
       </div>
     </div>
   )
