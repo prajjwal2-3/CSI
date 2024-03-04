@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import GlassAppBar from './GlassAppBar';
 import {useNavigate} from 'react-router-dom'
-const pages = ['Our Team', 'Brochure', 'Events','Gallery','About Us'];
+const pages = ['Team', 'Brochure', 'Events','Gallery','About'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar() {
@@ -22,7 +22,9 @@ function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 const handlePageNavigate=(page)=>{
-navigate('/about')
+  console.log(page)
+navigate(`${page
+}`)
 }
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -32,7 +34,7 @@ navigate('/about')
   };
 
   const handleCloseNavMenu = (page) => {
-    handlePageNavigate(page)
+    handlePageNavigate(page);
     setAnchorElNav(null);
   };
 
@@ -125,16 +127,11 @@ navigate('/about')
           </div>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white' , display: 'block' }}
-                // className='my-2 text-white block font-bold'
-              >
-                {page}
-              </Button>
-            ))}
+          {pages.map((page) => (
+                <MenuItem key={page} onClick={()=>handleCloseNavMenu(page)} >
+                  <Typography textAlign="center" >{page}</Typography>
+                </MenuItem>
+              ))}
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
