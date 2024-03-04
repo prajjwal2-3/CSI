@@ -5,6 +5,7 @@ import App from './components/App';
 import { createBrowserRouter,RouterProvider } from "react-router-dom";
 import AboutPage from './components/AboutPage';
 import Team from './components/Team';
+import Gallery from './components/Gallery';
 const appRouter = createBrowserRouter([
   
     {
@@ -19,6 +20,10 @@ const appRouter = createBrowserRouter([
         {
           path:"/Team",
           element:<Team/>
+        },
+        {
+          path:'/Gallery',
+          element:<Gallery/>
         }
   
       ])
